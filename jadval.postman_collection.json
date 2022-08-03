@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "dbcc1c97-20fe-45ea-993d-5f17017c3280",
+		"name": "jadval",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19171064"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "ffff",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "sss",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "bbb",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jadval",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU5NTEyOTg3LCJpYXQiOjE2NTk1MTI2ODcsImp0aSI6ImE1NWZiMGY5ZDNmMTQ0OTI5NzI3ZWFlODA3ZjUxOGVjIiwidXNlcl9pZCI6MTZ9.XAuPK-W2s-Q_atN2BiBor_j7TEU1YrAuREeCyE7t6b4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/table?group_name=1&week=DU",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table"
+					],
+					"query": [
+						{
+							"key": "group_name",
+							"value": "1"
+						},
+						{
+							"key": "week",
+							"value": "DU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "table_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"group_name\": 1,\r\n    \"week\": \"DU\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/table_post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"table_post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fanlar_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "08:00",
+							"type": "text"
+						},
+						{
+							"key": "subject_name",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "teacher_name",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "room_no",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/fanlar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"fanlar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
